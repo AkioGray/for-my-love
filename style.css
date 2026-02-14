@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffdde1;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    z-index: 100;
+}
+
+.full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    overflow: hidden; /* Важно, чтобы фото не растягивали страницу */
+}
+
+h1 {
+    color: #d32f2f;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.gif-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- СТИЛИ ДЛЯ 25 ФОТО --- */
+.scattered-photo {
+    position: absolute;
+    width: 120px; /* Сделали чуть меньше, чтобы влезло 25 штук */
+    height: auto;
+    border: 6px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* При наведении фото становится огромным и перекрывает всё */
+.scattered-photo:hover {
+    z-index: 1000 !important;
+    transform: scale(2.5) rotate(0deg) !important; /* Увеличиваем сильнее */
+}
+
+/* Блок с текстом поверх фото */
+.message-box {
+    position: relative;
+    z-index: 900; 
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85); /* Белый фон стал плотнее */
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* --- КНОПКИ --- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 60px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    z-index: 100;
+}
+
+#yesBtn { background-color: #4CAF50; color: white; transition: transform 0.2s; }
+#yesBtn:hover { transform: scale(1.1); }
+
+#noBtn {
+    background-color: #f44336;
+    color: white;
+    transition: left 0.5s ease, top 0.5s ease; 
+}
+
+.secondary-btn {
+    background-color: #9e9e9e;
+    color: white;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+}
+.secondary-btn:hover { background-color: #757575; }
+
+.primary-btn {
+    background-color: #ff4081;
+    color: white;
+    margin-top: 15px;
+}
+.primary-btn:hover { background-color: #f50057; }
+
+.hidden { display: none !important; }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентинка</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ЭКРАН 1: ВОПРОС -->
+    <div class="container" id="mainScreen">
+        <div class="gif-container">
+            <img src="./question.jpg" alt="Вопрос">
+        </div>
+        <h1>Ты будешь моей сладуськой?</h1>
+        <div class="buttons">
+            <button id="yesBtn">Да</button>
+            <button id="noBtn">Нет</button>
+        </div>
+    </div>
+
+    <!-- ЭКРАН 2: УСПЕХ (25 ФОТО) -->
+    <div class="full-screen hidden" id="successScreen">
+        
+        <!-- Текст поверх фото -->
+        <div class="message-box">
+            <h1>Ура! Я так и знал! ❤️</h1>
+            <button id="backBtn" class="secondary-btn">Я передумала...</button>
+        </div>
+
+        <!-- 25 РАЗБРОСАННЫХ ФОТО -->
+        <img src="./success1.jpg" class="scattered-photo">
+        <img src="./success2.jpg" class="scattered-photo">
+        <img src="./success3.jpg" class="scattered-photo">
+        <img src="./success4.jpg" class="scattered-photo">
+        <img src="./success5.jpg" class="scattered-photo">
+        <img src="./success6.jpg" class="scattered-photo">
+        <img src="./success7.jpg" class="scattered-photo">
+        <img src="./success8.jpg" class="scattered-photo">
+        <img src="./success9.jpg" class="scattered-photo">
+        <img src="./success10.jpg" class="scattered-photo">
+        <img src="./success11.jpg" class="scattered-photo">
+        <img src="./success12.jpg" class="scattered-photo">
+        <img src="./success13.jpg" class="scattered-photo">
+        <img src="./success14.jpg" class="scattered-photo">
+        <img src="./success15.jpg" class="scattered-photo">
+        <img src="./success16.jpg" class="scattered-photo">
+        <img src="./success17.jpg" class="scattered-photo">
+        <img src="./success18.jpg" class="scattered-photo">
+        <img src="./success19.jpg" class="scattered-photo">
+        <img src="./success20.jpg" class="scattered-photo">
+        <img src="./success21.jpg" class="scattered-photo">
+        <img src="./success22.jpg" class="scattered-photo">
+        <img src="./success23.jpg" class="scattered-photo">
+        <img src="./success24.jpg" class="scattered-photo">
+        <img src="./success25.jpg" class="scattered-photo">
+    </div>
+
+    <!-- ЭКРАН 3: ГРУСТЬ -->
+    <div class="container hidden" id="sadScreen">
+        <div class="gif-container">
+            <img src="./sad.jpg" alt="Грусть">
+        </div>
+        <h1>КАК ТАК?!!?!?!?!? 💔</h1>
+        <button id="retryBtn" class="primary-btn">Ладно, я пошутила! ❤️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
